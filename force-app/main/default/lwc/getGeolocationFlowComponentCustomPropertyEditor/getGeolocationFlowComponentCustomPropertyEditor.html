@@ -1,5 +1,5 @@
 <template>
-	<div class="slds-p-top_large">
+	<div class="slds-var-p-top_large">
 		<lightning-input
 			type="checkbox"
 			label="Show an error if no geolocation is available"
@@ -8,27 +8,33 @@
 		>
 		</lightning-input>
 	</div>
-	<div class="slds-p-top_small">
+	<div class="slds-var-p-top_small">
 		<lightning-input type="checkbox" label="Show a map with the geolocation" checked={showMap} onchange={handleShowMapCheckbox}>
 		</lightning-input>
 	</div>
 	<template if:true={showMap}>
-		<div class="slds-p-top_small">
+		<div class="slds-var-p-top_small slds-var-p-left_x-large">
 			<lightning-slider label="Initial zoom level" step="1" min="1" max="22" value={zoomLevel} onchange={handleZoomLevel}>
 			</lightning-slider>
 		</div>
 	</template>
-	<p class="slds-p-top_large slds-text-body_small slds-text-color_weak slds-text-align_center">
-		<em>
-			You can find the latest version of this component, as well as complete installation and configuration instructions,
-			at&nbsp;
-			<lightning-formatted-url
-				value="https://github.com/SFDC-Assets/Get-Geolocation"
-				label="this GitHub repository"
-				target="_blank"
-			>
-			</lightning-formatted-url>
-			.
-		</em>
-	</p>
+	<details class="slds-var-p-top_large slds-var-p-bottom_small">
+		<summary>
+			<lightning-icon icon-name="utility:info" size="x-small"></lightning-icon>
+			<strong> Configuration and Help </strong>
+		</summary>
+		<p class="slds-var-p-top_small slds-text-body_small slds-text-color_weak">
+			<em>
+				You can find the latest version of this component, as well as complete installation and configuration instructions,
+				at&nbsp;
+				<lightning-formatted-url
+					value="https://github.com/SFDC-Assets/Get-Geolocation"
+					label="this GitHub repository"
+					target="_blank"
+				>
+				</lightning-formatted-url>
+				.
+			</em>
+		</p>
+	</details>
 </template>
