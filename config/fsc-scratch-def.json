@@ -1,0 +1,10 @@
+{
+  "orgName": "FSC Scratch Org",
+  "edition": "Enterprise",
+  "features": ["PersonAccounts","ContactsToMultipleAccounts", "FinancialServicesUser:5"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    }
+  }
+}

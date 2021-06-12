@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Get Geolocation</masterLabel>
+    <description>Lightning web component that returns the device's current geolocation to a flow.</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen" configurationEditor="c-get-geolocation-flow-component-custom-property-editor">
+            <property name="showErrors" role="inputOnly" label="Show errors if there is no geolocation available" type="Boolean" default="false" description="Check this box to show an error toast if the device does not support geolocation." />
+            <property name="showMap" role="inputOnly" label="Show a map with a marker of the current geolocation" type="Boolean" default="false" description="Check this box to show a map with the current geolocation." />
+            <property name="zoomLevel" role="inputOnly" label="Initial zoom level for map" type="Integer" default="10" min="1" max="22" description="If a map is shown, this value sets the initial zoom level for the map." />
+            <property name="latitude" role="outputOnly" label="Current latitude" type="String" description="The user's current latitude." />
+            <property name="longitude" role="outputOnly" label="Current longitude" type="String" description="The user's current longitude." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

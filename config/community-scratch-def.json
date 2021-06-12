@@ -1,0 +1,15 @@
+{
+    "orgName": "Sample Org",
+    "edition": "developer",
+    "features": [
+        "COMMUNITIES"
+    ],
+    "settings": {
+        "experienceBundleSettings": {
+            "enableExperienceBundleMetadata": true
+        },
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        }
+    }
+}

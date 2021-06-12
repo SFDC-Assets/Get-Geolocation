@@ -1,0 +1,14 @@
+/.sfdx/orgs/**
+/.prettierrc
+**/.prettierignore
+**/.DS_Store
+/.vscode/settings.json
+/uncrustify.cfg
+/.uncrustify.cfg.swp
+/.sfdx/tools/**
+/.sfdx/typings/**
+/.sfdx/indexes/**
+/.sfdx/orgs/**
+/typings/**
+/package-lock.json
+/node_modules/**
