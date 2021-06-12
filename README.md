@@ -13,7 +13,7 @@ This Lightning Web Component is intended to be a (mostly) silent component that 
 
 Read the disclaimer below and click on the **Install the Package** link. This will install the component to your org.
 
-[Installation and Setup](images/GeolocationFlowComponent.png)
+![Installation and Setup](/images/GeolocationFlowComponent.png)
 
 The component is meant to be a minimalist mechanism for returning the latitude and longitude of the device's location to a Salesforce screen flow. To add the component to a flow, look for it in the **Custom** section of the Flow Builder. Simply drag it onto the screen and configure it.
 
