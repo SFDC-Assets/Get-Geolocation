@@ -14,6 +14,9 @@ package.xml
 
 force-app/main/default/applications/standard__LightningSales.app-meta.xml
 standard__LightningSales.app
+force-app/main/default/profiles/Admin.profile-meta.xml
+force-app/main/default/profiles/Custom%3A Support Profile.profile-meta.xml
+force-app/main/default/profiles/Custom%3A Sales Profile.profile-meta.xml
+force-app/main/default/profiles/Custom%3A Marketing Profile.profile-meta.xml
 force-app/main/default/flexipages/Home_Page_Default.flexipage-meta.xml
 force-app/main/default/tabs/standard-home.tab-meta.xml
-force-app/main/default/settings/Security.settings-meta.xml

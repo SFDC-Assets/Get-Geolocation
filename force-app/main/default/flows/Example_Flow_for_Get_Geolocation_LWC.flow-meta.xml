@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>52.0</apiVersion>
-    <description>Example flow that shows the functioning of the geolocation Lightning Web Component.</description>
-    <interviewLabel>Test Flow for Geolocation {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Example Flow for Geolocation</label>
+    <description>Example flow showing how to use the Get Geolocation Lightning Web Component.</description>
+    <interviewLabel>Example Flow for Get Geolocation LWC {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Example Flow for Get Geolocation LWC</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -33,7 +33,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>Show_Geolocation</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;Latitude:&lt;/b&gt; {!Get_Latitude_and_Longitude.latitude}&lt;/p&gt;&lt;p&gt;&lt;b&gt;Longitude:&lt;/b&gt; {!Get_Latitude_and_Longitude.longitude}&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;b&gt;Latitude:&lt;/b&gt; {!Latitude}&lt;/p&gt;&lt;p&gt;&lt;b&gt;Longitude:&lt;/b&gt; {!Longitude}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -51,8 +51,8 @@
             <targetReference>Display_Geolocation</targetReference>
         </connector>
         <fields>
-            <name>Just_Hit_Next</name>
-            <fieldText>&lt;p&gt;Just hit &quot;Next&quot;&lt;/p&gt;</fieldText>
+            <name>Hit_Next</name>
+            <fieldText>&lt;p&gt;Hit the [Next] button to see the geolocation data returned by the component.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
@@ -73,7 +73,14 @@
             </inputParameters>
             <inputsOnNextNavToAssocScrn>ResetValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
+            <outputParameters>
+                <assignToReference>Latitude</assignToReference>
+                <name>latitude</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>Longitude</assignToReference>
+                <name>longitude</name>
+            </outputParameters>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -86,4 +93,22 @@
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <description>Stores the latitude of the geolocation returned by the Get Geolocation LWC. Using a dedicated variable with a specific number of decimal places instead of the default returned by the component in the screen will result in better precision returned to the flow.</description>
+        <name>Latitude</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>7</scale>
+    </variables>
+    <variables>
+        <description>Stores the longitude of the geolocation returned by the Get Geolocation LWC. Using a dedicated variable with a specific number of decimal places instead of the default returned by the component in the screen will result in better precision returned to the flow.</description>
+        <name>Longitude</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>7</scale>
+    </variables>
 </Flow>

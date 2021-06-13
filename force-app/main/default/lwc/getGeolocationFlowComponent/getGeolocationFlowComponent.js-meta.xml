@@ -11,9 +11,9 @@
         <targetConfig targets="lightning__FlowScreen" configurationEditor="c-get-geolocation-flow-component-custom-property-editor">
             <property name="showErrors" role="inputOnly" label="Show errors if there is no geolocation available" type="Boolean" default="false" description="Check this box to show an error toast if the device does not support geolocation." />
             <property name="showMap" role="inputOnly" label="Show a map with a marker of the current geolocation" type="Boolean" default="false" description="Check this box to show a map with the current geolocation." />
-            <property name="zoomLevel" role="inputOnly" label="Initial zoom level for map" type="Integer" default="10" min="1" max="22" description="If a map is shown, this value sets the initial zoom level for the map." />
-            <property name="latitude" role="outputOnly" label="Current latitude" type="String" description="The user's current latitude." />
-            <property name="longitude" role="outputOnly" label="Current longitude" type="String" description="The user's current longitude." />
+            <property name="zoomLevel" role="inputOnly" label="Initial zoom level for map" type="Integer" default="10" description="If a map is shown, this value sets the initial zoom level for the map." />
+            <property name="latitude" role="outputOnly" label="Current latitude" type="Integer" description="The device's current latitude." />
+            <property name="longitude" role="outputOnly" label="Current longitude" type="Integer" description="The device's current longitude." />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

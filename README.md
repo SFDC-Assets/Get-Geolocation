@@ -23,16 +23,18 @@ There are two options you can configure for additional capability:
 - **Show a map with the geolocation**: Check this if you want the component to display a Google map with the device's location.
 - **Initial zoom level**: Choose an initial zoom level for the map, if selected.
 
-The component will return two variables, `latitude` and `longitude` as output variables to the flow.
+The component will return two variables, `latitude` and `longitude`, as output variables to the flow.
+
+There is an example flow called `Example Flow for Get Geolocation LWC` included in the package that you can use as a template. Make sure that you make a copy before you make changes to it as it will be overwritten the next time you upgrade the package.
 
 ## How to Deploy This Package to Your Org
 
 I am a pre-sales Solutions Engineer for [Salesforce](https://www.salesforce.com) and I develop solutions for my customers to demonstrate the capabilities of the amazing Salesforce platform. _This package represents functionality that I have used for demonstration purposes and the content herein is definitely not ready for actual production use; specifically, it has not been tested extensively nor has it been written with security and access controls in mind. By installing this package, you assume all risk for any consequences and agree not to hold me or my company liable._ If you are OK with that ...
 
-[Install the Package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2E000003od1DQAQ)
+[Install the Package](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2E000003od1IQAQ)
 
 ## Maintainer
 
 [John Meyer / johnsfdemo](https://github.com/johnsfdemo)
 
-**Current Version**: 1.0.1
+**Current Version**: 1.0.2
