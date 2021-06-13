@@ -27,7 +27,7 @@ There are three options you can configure for additional capability:
 - **Show a map with the geolocation**: Check this if you want the component to display a Google map with the device's location.
 - **Initial zoom level**: Choose an initial zoom level for the map, if selected.
 
-The component will return two variables, `latitude` and `longitude`, as output variables to the flow. The will be the latitude and longitude, respectively, of the device's location expressed as decimal numbers (not degrees, minutes, and seconds).  If you use the default variables from the component's API name, `{!API_Name.latitude}` and `{!API_Name.longitude}`, you may get truncation of the decimal portion of the returned values. In order to prevent this, declare a pair of `Number` variables in the flow, one for latitude and one for longitude, with a precision of 7 decimal places to hold the returned geolocation:
+The component will return two variables, `latitude` and `longitude`, as output variables to the flow. They will contain the latitude and longitude, respectively, of the device's location expressed as decimal numbers (not degrees, minutes, and seconds).  If you use the default variables from the component's API name, `{!API_Name.latitude}` and `{!API_Name.longitude}`, you may get truncation of the decimal portion of the returned values. In order to prevent this, declare a pair of `Number` variables in the flow, one for latitude and one for longitude, with a precision of 7 decimal places to hold the returned geolocation:
 
 ![Variables](/images/Variables.png)
 
