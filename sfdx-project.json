@@ -4,8 +4,8 @@
             "path": "force-app",
             "default": true,
             "package": "Get Geolocation",
-            "versionName": "Version 1.0.2",
-            "versionNumber": "1.0.2.0"
+            "versionName": "Version 1.1.2",
+            "versionNumber": "1.1.2.0"
         }
     ],
     "namespace": "",
@@ -16,6 +16,9 @@
         "Get Geolocation@0.1.0-1": "04t2E000003od0oQAA",
         "Get Geolocation@1.0.0-0": "04t2E000003od18QAA",
         "Get Geolocation@1.0.1-0": "04t2E000003od1DQAQ",
-        "Get Geolocation@1.0.2-0": "04t2E000003od1IQAQ"
+        "Get Geolocation@1.0.2-0": "04t2E000003od1IQAQ",
+        "Get Geolocation@1.1.0-0": "04t2E000003ZTvMQAW",
+        "Get Geolocation@1.1.1-0": "04t2E000003ZTvRQAW",
+        "Get Geolocation@1.1.2-0": "04t2E000003ZTvgQAG"
     }
 }

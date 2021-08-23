@@ -33,7 +33,7 @@
         <allowPause>false</allowPause>
         <fields>
             <name>Show_Geolocation</name>
-            <fieldText>&lt;p&gt;&lt;b&gt;Latitude:&lt;/b&gt; {!Latitude}&lt;/p&gt;&lt;p&gt;&lt;b&gt;Longitude:&lt;/b&gt; {!Longitude}&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;b&gt;Latitude:&lt;/b&gt; {!Latitude}&lt;/p&gt;&lt;p&gt;&lt;b&gt;Longitude:&lt;/b&gt; {!Longitude}&lt;/p&gt;&lt;p&gt;&lt;b&gt;Altitude:&lt;/b&gt; {!Altitude} meters&lt;/p&gt;&lt;p&gt;&lt;b&gt;Heading:&lt;/b&gt; {!Heading} degrees&lt;/p&gt;&lt;p&gt;&lt;b&gt;Speed:&lt;/b&gt; {!Speed} meters/sec&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
@@ -81,6 +81,18 @@
                 <assignToReference>Longitude</assignToReference>
                 <name>longitude</name>
             </outputParameters>
+            <outputParameters>
+                <assignToReference>Altitude</assignToReference>
+                <name>altitude</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>Heading</assignToReference>
+                <name>heading</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>Speed</assignToReference>
+                <name>speed</name>
+            </outputParameters>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
@@ -93,6 +105,24 @@
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <description>Stores the altitude in meters of the geolocation returned by the Get Geolocation LWC.</description>
+        <name>Altitude</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>1</scale>
+    </variables>
+    <variables>
+        <description>Stores the heading in degrees of the geolocation returned by the Get Geolocation LWC. 0 is north, 90 is east, 180 is south, and 270 is west. If the current speed is 0, this value will be null.</description>
+        <name>Heading</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
+    </variables>
     <variables>
         <description>Stores the latitude of the geolocation returned by the Get Geolocation LWC. Using a dedicated variable with a specific number of decimal places instead of the default returned by the component in the screen will result in better precision returned to the flow.</description>
         <name>Latitude</name>
@@ -110,5 +140,14 @@
         <isInput>false</isInput>
         <isOutput>true</isOutput>
         <scale>7</scale>
+    </variables>
+    <variables>
+        <description>Stores the speed in meters/second of the geolocation returned by the Get Geolocation LWC.</description>
+        <name>Speed</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
     </variables>
 </Flow>

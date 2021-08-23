@@ -14,6 +14,9 @@
             <property name="zoomLevel" role="inputOnly" label="Initial zoom level for map" type="Integer" default="10" description="If a map is shown, this value sets the initial zoom level for the map." />
             <property name="latitude" role="outputOnly" label="Current latitude" type="Integer" description="The device's current latitude." />
             <property name="longitude" role="outputOnly" label="Current longitude" type="Integer" description="The device's current longitude." />
+            <property name="altitude" role="outputOnly" label="Current altitude" type="Integer" description="The device's altitude in meters (may return null on some devices)." />
+            <property name="speed" role="outputOnly" label="Current speed" type="Integer" description="The device's speed in meters per second (may return null on some devices)." />
+            <property name="heading" role="outputOnly" label="Current heading" type="Integer" description="The device's heading in degrees (returns null if speed is 0)." />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

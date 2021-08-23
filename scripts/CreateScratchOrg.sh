@@ -26,8 +26,6 @@ sfdx force:org:create \
     --loglevel error || exit 1
 echo "*** Pushing metadata to scratch org ..."
 sfdx force:source:push || exit 1
-#echo "*** Assigning permission set to your user ..."
-#sfdx force:user:permset:assign --permsetname Demo_Cleanup --loglevel error
 echo "*** Generating password for your user ..."
 sfdx force:user:password:generate --targetusername "$orgAlias" --loglevel error
 echo "*** Setting time zone for your user ..."

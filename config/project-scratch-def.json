@@ -1,10 +1,13 @@
 {
-  "orgName": "Demo Company",
+  "orgName": "Get Geolocation",
   "edition": "Developer",
   "features": [],
   "settings": {
     "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
+        "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+        "enableS1EncryptedStoragePref2": false
     }
   }
 }
